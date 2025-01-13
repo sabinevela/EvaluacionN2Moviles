@@ -1,12 +1,19 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
+import AppNavegador from './Components/MainNavigator';
 
 
-const Stack = createStackNavigator();
-
-export default function AppNavegador() {
+export default function App() {
   return (
-     <AppNavegador/>
+   <AppNavegador/>
   );
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

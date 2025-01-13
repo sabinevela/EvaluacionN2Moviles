@@ -17,7 +17,7 @@ const LoginScreen = ({ navigation }: any) => {
     signInWithEmailAndPassword(auth, email, password)
       .then(() => {
         Alert.alert('Sesión iniciada');
-        navigation.navigate('Aplicacion');
+        navigation.navigate('Perfil');
       })
       .catch((error) => {
         const errorMessage = error.message;
