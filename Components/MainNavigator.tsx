@@ -14,7 +14,6 @@ import PerfilScreen from '../Screens/PerfilScreen';
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-// Navegación con Tabs
 function Tabs() {
   return (
     <Tab.Navigator>
