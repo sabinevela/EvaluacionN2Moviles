@@ -10,7 +10,6 @@ const OperacionesScreen = () => {
   const [comentario, setComentario] = useState<string>('');
 
   const handleOperaciones = () => {
-    // Validar que los campos no estén vacíos
     if (idOperacion.trim() === '' || monto.trim() === '' || tipoOperacion.trim() === '' || comentario.trim() === '') {
       Alert.alert('Por favor, complete todos los campos.');
       return;
@@ -18,13 +17,10 @@ const OperacionesScreen = () => {
 
     const montoNumerico = parseFloat(monto);
 
-    // Validar que el monto sea positivo
     if (montoNumerico < 0) {
       Alert.alert('Error', 'El monto no puede ser negativo.');
       return;
     }
-
-    // Si el monto es mayor a $500, preguntar si desea continuar
     if (montoNumerico > 500) {
       Alert.alert(
         'Confirmar Transacción',

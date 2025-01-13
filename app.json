@@ -19,10 +19,12 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/banco.jpg",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.skz.app_skz" 
     },
     "web": {
       "favicon": "./assets/banco.jpg"
     }
   }
 }
+

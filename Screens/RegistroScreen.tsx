@@ -19,10 +19,9 @@ const RegisterScreen = ({ navigation }: any) => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-
-        // Guardar los datos adicionales en la base de datos Realtime
         const db = getDatabase();
-        const userRef = ref(db, 'usuarios/' + user.uid);
+        const userRef = ref(db, 'usuarios/' + user.uid); 
+
         set(userRef, {
           userName: name,
           email: email,
@@ -39,7 +38,7 @@ const RegisterScreen = ({ navigation }: any) => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        Alert.alert('Error', errorMessage);
+        Alert.alert('Error', errorMessage); 
       });
   };
 

@@ -1,14 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { createStackNavigator } from '@react-navigation/stack';
-import AppNavegador from './Components/MainNavigator';
-
+import Navegador from './Components/MainNavigator'; 
 
 export default function App() {
   return (
-   <AppNavegador/>
+    <Navegador/>  
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -17,3 +15,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
