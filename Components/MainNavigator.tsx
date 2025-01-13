@@ -11,17 +11,6 @@ import WelcomeScreen from "../Screens/WelcomeScreen";
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-function MyStack() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Welcome" component={WelcomeScreen} />
-      <Stack.Screen name="Login" component={LoginScreen} />
-     <Stack.Screen name="Registro" component={RegisterScreen} />
-     <Stack.Screen name="Tab" component={MyTab} />
-    </Stack.Navigator>
-  );
-}
-
 function MyTab() {
   return (
     <Tab.Navigator>
@@ -32,10 +21,25 @@ function MyTab() {
   );
 }
 
-export default function Navegador() {
+function MyStack() {
   return (
-   <NavigationContainer>
-      <MyStack/>
-      </NavigationContainer>
+    <Stack.Navigator initialRouteName="Welcome">
+      <Stack.Screen name="Welcome" component={WelcomeScreen} />
+      <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="Registro" component={RegisterScreen} />
+      <Stack.Screen name="Tabs" component={MyTab} />
+      <Stack.Screen name="Operaciones" component={OperacionesScreen} />
+      <Stack.Screen name="Historial" component={HistorialScreen} />
+      <Stack.Screen name="Perfil" component={PerfilScreen} />
+    </Stack.Navigator>
   );
 }
+
+export default function Navegador() {
+  return (
+    <NavigationContainer>
+      <MyStack/>
+    </NavigationContainer>
+  );
+}
+

@@ -1,7 +1,9 @@
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";  
-import { getDatabase } from "firebase/database"; 
+import { getAuth } from "firebase/auth";
+import { getDatabase } from "firebase/database";
+import { getAnalytics } from "firebase/analytics";
 
+// Tu configuración de Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyD3tSQJFtwhWSaiAOZ8LXjjTQzCKhqnIGY",
   authDomain: "sv-prueba-e90b0.firebaseapp.com",
@@ -13,9 +15,15 @@ const firebaseConfig = {
   measurementId: "G-24XQ2B5W5T"
 };
 
+// Inicializa Firebase solo una vez
 const app = initializeApp(firebaseConfig);
 
+// Inicializa los servicios de Firebase que necesitas
+const auth = getAuth(app);
+const db = getDatabase(app); // Usa esta referencia para la base de datos
+const analytics = getAnalytics(app); // Solo si lo necesitas
 
-export const auth = getAuth(app);
-export const db = getDatabase(app);
+// Exporta las instancias que necesitas en otros archivos
+export { auth, db };
+
 

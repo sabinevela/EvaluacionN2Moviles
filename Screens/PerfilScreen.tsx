@@ -38,11 +38,10 @@ const PerfilScreen = () => {
     <View style={styles.container}>
       <Text style={styles.title}>Perfil</Text>
       <View style={styles.infoContainer}>
-        <Text style={styles.info}>Nombre Completo: {userInfo.nombreCompleto}</Text>
+        <Text style={styles.info}>Nombre Completo: {userInfo.userName}</Text>
         <Text style={styles.info}>Correo Electrónico: {userInfo.email}</Text>
-        <Text style={styles.info}>Número Celular: {userInfo.celular}</Text>
-        <Text style={styles.info}>Bienvenido, {userInfo.nombreCompleto}!</Text>
-        <Text style={styles.info}>Autorización de Uso de Datos: {userInfo.autorizacionDatos ? 'Aceptado' : 'No Aceptado'}</Text>
+        <Text style={styles.info}>Número Celular: {userInfo.phone}</Text>
+        <Text style={styles.info}>Bienvenido, {userInfo.userName}!</Text>
       </View>
     </View>
   );
@@ -79,4 +78,5 @@ const styles = StyleSheet.create({
 });
 
 export default PerfilScreen;
+
 
